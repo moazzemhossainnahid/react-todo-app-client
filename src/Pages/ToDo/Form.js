@@ -11,7 +11,6 @@ const Form = () => {
         const details = data.details;
         if(title.length > 0 && details.length > 0){
         reset();
-        toast.success("Task Added Successfully.")
         }else{
             toast("Please Enter Title & Description Properly.")
         }

@@ -1,16 +1,12 @@
 import { faCheck, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 
 const TodosDetails = ({ data, refetch }) => {
     const { _id, title, details, date, role } = data;
-
-    const handleEditToDo = (id) => {
-
-
-
-    }
+    const navigate = useNavigate();
 
     const handleDeleteToDo = (id) => {
 
@@ -101,7 +97,7 @@ const TodosDetails = ({ data, refetch }) => {
                             <button onClick={() => { handleDeleteToDo(_id) }} ><FontAwesomeIcon className='px-1' icon={faTrash} /></button>
                         </div>
                         <div className="w-8 h-8 rounded-full bg-gray-800 dark:bg-gray-100 hover:dark:bg-blue-500  dark:text-gray-800 text-white flex items-center justify-center">
-                            <button onClick={() => { handleEditToDo(_id) }} ><FontAwesomeIcon className='px-1' icon={faEdit} /></button>
+                            <button onClick={() => { navigate(`/todo/${_id}`) }} ><FontAwesomeIcon className='px-1' icon={faEdit} /></button>
                         </div>
                     </div>
                 </div>

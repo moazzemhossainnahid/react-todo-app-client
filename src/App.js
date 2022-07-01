@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import ToDo from './Pages/ToDo/ToDo';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import EditTodo from './Pages/Home/EditTodo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/complete' element={<CompleteTask/>} />
         <Route path='/todo' element={<ToDo/>} />
+        <Route path='/todo/:id' element={<EditTodo/>} />
         <Route path='/calender' element={<Calender/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
