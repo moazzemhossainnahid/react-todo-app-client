@@ -6,7 +6,7 @@ import CompleteDetails from './CompleteDetails';
 const CompleteToDo = () => {
 
     const { isLoading, data, refetch } = useQuery('todos', () =>
-    fetch('http://localhost:5000/completed')
+    fetch('https://react-todo-app-nhd.herokuapp.com/completed')
         .then(res => res.json())
 )
 

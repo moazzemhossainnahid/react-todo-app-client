@@ -23,7 +23,7 @@ const TodosDetails = ({ data, refetch }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/todo/${id}`, {
+                    fetch(`https://react-todo-app-nhd.herokuapp.com/todo/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'content-type': 'application/json'
@@ -59,7 +59,7 @@ const TodosDetails = ({ data, refetch }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/todo/${id}`, {
+                    fetch(`https://react-todo-app-nhd.herokuapp.com/todo/${id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'

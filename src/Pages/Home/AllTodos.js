@@ -5,7 +5,7 @@ import TodosDetails from './TodosDetails';
 
 const AllTodos = () => {
     const { isLoading, data, refetch } = useQuery('todos', () =>
-        fetch('http://localhost:5000/todos')
+        fetch('https://react-todo-app-nhd.herokuapp.com/todos')
             .then(res => res.json())
     )
 

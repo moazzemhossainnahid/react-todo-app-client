@@ -25,7 +25,7 @@ const Form = () => {
             date: date
         }
 
-        fetch(`http://localhost:5000/todos`,{
+        fetch(`https://react-todo-app-nhd.herokuapp.com/todos`,{
             method: 'POST', 
             headers: {
                 'content-type' : 'application/json'
